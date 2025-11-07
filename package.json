@@ -1,0 +1,25 @@
+{
+  "name": "typescript-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonmoyZohani/TypeScript-With-React.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TonmoyZohani/TypeScript-With-React/issues"
+  },
+  "homepage": "https://github.com/TonmoyZohani/TypeScript-With-React#readme",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
