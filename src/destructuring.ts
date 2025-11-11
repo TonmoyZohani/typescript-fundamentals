@@ -1,29 +1,29 @@
-// object destructuring
-// array destructuring
+// // object destructuring
+// // array destructuring
 
-const user = {
-  id: 123,
-  name: {
-    firstName: "Mezbaul",
-    middleName: "Abedin",
-    lastName: "Forhan",
-  },
-  gender: "male",
-  favouriteColor: "black",
-};
+// const user = {
+//   id: 123,
+//   name: {
+//     firstName: "Mezbaul",
+//     middleName: "Abedin",
+//     lastName: "Forhan",
+//   },
+//   gender: "male",
+//   favouriteColor: "black",
+// };
 
-//const myFavouriteColor = user.favouriteColor
-//const myMiddleName = user.name.middleName
+// //const myFavouriteColor = user.favouriteColor
+// //const myMiddleName = user.name.middleName
 
-const {
-  favouriteColor,
-  name: { middleName: myMiddleName },
-} = user;
+// const {
+//   favouriteColor,
+//   name: { middleName: myMiddleName },
+// } = user;
 
-//console.log(myMiddleName);
+// //console.log(myMiddleName);
 
-const friends = ["karim", "Rahim", "Mahim"];
+// const friends = ["karim", "Rahim", "Mahim"];
 
-const [, , myBestFriend] = friends;
+// const [, , myBestFriend] = friends;
 
-console.log(myBestFriend);
+// console.log(myBestFriend);

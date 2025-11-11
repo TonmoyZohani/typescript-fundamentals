@@ -1,16 +1,16 @@
-// JS - TS
-// string, number, boolean, undefined, null
+// // JS - TS
+// // string, number, boolean, undefined, null
 
-// TS: never, unknown, void
+// // TS: never, unknown, void
 
-let userName: string = "mezba123";
+// let userName: string = "mezba123";
 
-let userId = 123;
+// let userId = 123;
 
-userName.toFixed();
-userId.toFixed;
+// userName.toFixed();
+// userId.toFixed;
 
-let isAdmin: boolean = false;
-isAdmin = true;
+// let isAdmin: boolean = false;
+// isAdmin = true;
 
-let x: undefined = undefined;
+// let x: undefined = undefined;

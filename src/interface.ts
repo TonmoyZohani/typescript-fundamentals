@@ -1,54 +1,54 @@
-type User = {
-  name: string;
-  age: number;
-};
+// type User = {
+//   name: string;
+//   age: number;
+// };
 
-// interface : object type: array, object , function
+// // interface : object type: array, object , function
 
-interface IUser {
-  name: string;
-  age: number;
-}
+// interface IUser {
+//   name: string;
+//   age: number;
+// }
 
-type Role = {
-  role: "admin" | "user";
-};
+// type Role = {
+//   role: "admin" | "user";
+// };
 
-type UserWithRole = User & Role;
+// type UserWithRole = User & Role;
 
-interface IUserWithRole extends IUser {
-  role: "admin" | "user";
-}
+// interface IUserWithRole extends IUser {
+//   role: "admin" | "user";
+// }
 
-const user1: IUserWithRole = {
-  name: "Mr.X",
-  age: 100,
-  role: "admin",
-};
+// const user1: IUserWithRole = {
+//   name: "Mr.X",
+//   age: 100,
+//   role: "admin",
+// };
 
-const user2: IUser = {
-  name: "Mr. Y",
-  age: 102,
-};
+// const user2: IUser = {
+//   name: "Mr. Y",
+//   age: 102,
+// };
 
-type IsAdmin = boolean;
+// type IsAdmin = boolean;
 
-const isAdmin: IsAdmin = false;
+// const isAdmin: IsAdmin = false;
 
-// function
+// // function
 
-type Add = (num1: number, num2: number) => number;
+// type Add = (num1: number, num2: number) => number;
 
-interface IAdd {
-  (num1: number, num2: number): number;
-}
+// interface IAdd {
+//   (num1: number, num2: number): number;
+// }
 
-const add: IAdd = (num1, num2) => num1 + num2;
+// const add: IAdd = (num1, num2) => num1 + num2;
 
-type Friends = string[];
+// type Friends = string[];
 
-interface IFriends {
-  [index: number]: string;
-}
+// interface IFriends {
+//   [index: number]: string;
+// }
 
-const freinds: IFriends = ["A", "B", "C"];
+// const freinds: IFriends = ["A", "B", "C"];
