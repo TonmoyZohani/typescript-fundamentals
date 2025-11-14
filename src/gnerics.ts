@@ -34,3 +34,26 @@
 
 // const coordinates1: Coordinates<number, number> = [20, 30];
 // const coordinates2: Coordinates<string, string> = ["20", "30"];
+
+// type GenericArray<T> = Array<T>;
+// const friends: GenericArray<string> = ["Mr. X", "Mr. Y", "Mr. Z"];
+// const rollNumbers: GenericArray<number> = [4, 7, 11];
+
+// console.log(friends);
+
+type GenericArray<T> = Array<T>;
+// const friends: GenericArray<string> = ["Mr. X", "Mr. Y", "Mr. Z"];
+// const rollNumbers: GenericArray<number> = [4, 7, 11];
+
+const userList:GenericArray<object> = [
+  {
+    name: "Mr. X",
+    age: 22,
+  },
+  {
+    name: "Mr. Y",
+    age: 25,
+  },
+];
+
+console.log(userList);
