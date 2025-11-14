@@ -1,1 +1,1 @@
-import "./gnerics";
+import "./genericWihInterface";

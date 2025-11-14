@@ -41,19 +41,30 @@
 
 // console.log(friends);
 
-type GenericArray<T> = Array<T>;
+// type GenericArray<T> = Array<T>;
 // const friends: GenericArray<string> = ["Mr. X", "Mr. Y", "Mr. Z"];
 // const rollNumbers: GenericArray<number> = [4, 7, 11];
 
-const userList:GenericArray<object> = [
-  {
-    name: "Mr. X",
-    age: 22,
-  },
-  {
-    name: "Mr. Y",
-    age: 25,
-  },
-];
+// const userList:GenericArray<object> = [
+//   {
+//     name: "Mr. X",
+//     age: 22,
+//   },
+//   {
+//     name: "Mr. Y",
+//     age: 25,
+//   },
+// ];
 
-console.log(userList);
+// const userList: GenericArray<{ name: string; age: number }> = [
+//   {
+//     name: "Mr. X",
+//     age: 22,
+//   },
+//   {
+//     name: "Mr. Y",
+//     age: 25,
+//   },
+// ];
+
+// console.log(userList);
