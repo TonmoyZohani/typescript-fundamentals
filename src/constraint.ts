@@ -2,7 +2,7 @@
 
 // type Stuent = { id: number; name: string; dateOfBirth: string; class: string };
 
-// const addStudentToCourse = <T extends Stuent>(studentInfo: T) => {
+// const addStudentToCourse = <T extends Stuent>(studentInfo: T) => { // It means that the type of studentInfo must be a type that extends the type Stuent
 //   return {
 //     course: "Next Level",
 //     ...studentInfo,

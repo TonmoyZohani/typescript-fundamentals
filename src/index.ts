@@ -1,1 +1,1 @@
-import "./genericWihInterface";
+import "./solution";
