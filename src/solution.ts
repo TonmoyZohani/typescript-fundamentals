@@ -73,13 +73,12 @@ const filterByRating = (items: Item[]): Item[] => {
 };
 
 const books = [
-  { title: 'Book A', rating: 4.5 },
-  { title: 'Book B', rating: 3.2 },
-  { title: 'Book C', rating: 5.0 },
+  { title: "Book A", rating: 4.5 },
+  { title: "Book B", rating: 3.2 },
+  { title: "Book C", rating: 5.0 },
 ];
 
 console.log(filterByRating(books));
-
 
 /*============================================================================
  Problem - 5                         
@@ -93,7 +92,7 @@ type UserType = {
 };
 
 function filterActiveUsers(users: UserType[]): UserType[] {
-  return users.filter(user => {
+  return users.filter((user) => {
     if (typeof user.isActive === "boolean") {
       return user.isActive === true;
     }
@@ -102,9 +101,9 @@ function filterActiveUsers(users: UserType[]): UserType[] {
 }
 
 const users = [
-  { id: 1, name: 'Rakib', email: 'rakib@example.com', isActive: true },
-  { id: 2, name: 'Asha', email: 'asha@example.com', isActive: false },
-  { id: 3, name: 'Rumi', email: 'rumi@example.com', isActive: true },
+  { id: 1, name: "Rakib", email: "rakib@example.com", isActive: true },
+  { id: 2, name: "Asha", email: "asha@example.com", isActive: false },
+  { id: 3, name: "Rumi", email: "rumi@example.com", isActive: true },
 ];
 
 console.log(filterActiveUsers(users));
@@ -127,12 +126,59 @@ function printBookDetails(book: Book): void {
   );
 }
 
-// Sample Input
 const myBook: Book = {
-  title: 'The Great Gatsby',
-  author: 'F. Scott Fitzgerald',
+  title: "The Great Gatsby",
+  author: "F. Scott Fitzgerald",
   publishedYear: 1925,
   isAvailable: true,
 };
 
 printBookDetails(myBook);
+
+/*============================================================================
+ Problem - 7                         
+============================================================================*/
+
+const getUniqueValues = (
+  arr1: (number | string)[],
+  arr2: (number | string)[]
+): (number | string)[] => {
+
+  const uniqueArr: (number | string)[] = [];
+
+  for (let i = 0; i < arr1.length; i++) {
+    let isDuplicate = false;
+
+    for (let j = 0; j < uniqueArr.length; j++) {
+      if (uniqueArr[j] === arr1[i]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+
+    if (!isDuplicate) {
+      uniqueArr[uniqueArr.length] = arr1[i];
+    }
+  }
+
+  for (let i = 0; i < arr2.length; i++) {
+    let isDuplicate = false;
+
+    for (let j = 0; j < uniqueArr.length; j++) {
+      if (uniqueArr[j] === arr2[i]) {
+        isDuplicate = true;
+        break;
+      }
+    }
+
+    if (!isDuplicate) {
+      uniqueArr[uniqueArr.length] = arr2[i];
+    }
+  }
+
+  return uniqueArr;
+};
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+console.log(getUniqueValues(array1, array2));
