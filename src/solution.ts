@@ -1,7 +1,3 @@
-/*============================================================================
- Problem - 1                         
-============================================================================*/
-
 const formatValue = (
   value: string | number | boolean
 ): string | number | boolean => {
@@ -16,13 +12,6 @@ const formatValue = (
   return value;
 };
 
-console.log(formatValue("hello")); // HELLO
-console.log(formatValue(5)); // 50
-console.log(formatValue(true)); // 10
-
-/*============================================================================
- Problem - 2                         
-============================================================================*/
 
 const getLength = (value: string | any[]): number => {
   if (typeof value === "string") {
@@ -33,12 +22,6 @@ const getLength = (value: string | any[]): number => {
   return 0;
 };
 
-console.log(getLength("typescript"));
-console.log(getLength([10, 20, 30, 40]));
-
-/*============================================================================
- Problem - 3                         
-============================================================================*/
 
 class Person {
   name: string;
@@ -54,14 +37,8 @@ class Person {
 }
 
 const person1 = new Person("John Doe", 30);
-console.log(person1.getDetails());
-
 const person2 = new Person("Alice", 25);
-console.log(person2.getDetails());
 
-/*============================================================================
- Problem - 4                         
-============================================================================*/
 
 interface Item {
   title: string;
@@ -78,11 +55,7 @@ const books = [
   { title: "Book C", rating: 5.0 },
 ];
 
-console.log(filterByRating(books));
 
-/*============================================================================
- Problem - 5                         
-============================================================================*/
 
 type UserType = {
   id: number;
@@ -106,11 +79,6 @@ const users = [
   { id: 3, name: "Rumi", email: "rumi@example.com", isActive: true },
 ];
 
-console.log(filterActiveUsers(users));
-
-/*============================================================================
- Problem - 6                         
-============================================================================*/
 
 interface Book {
   title: string;
@@ -135,9 +103,6 @@ const myBook: Book = {
 
 printBookDetails(myBook);
 
-/*============================================================================
- Problem - 7                         
-============================================================================*/
 
 const getUniqueValues = (
   arr1: (number | string)[],
@@ -181,4 +146,37 @@ const getUniqueValues = (
 
 const array1 = [1, 2, 3, 4, 5];
 const array2 = [3, 4, 5, 6, 7];
-console.log(getUniqueValues(array1, array2));
+
+
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+  discount?: number;
+}
+
+function calculateTotalPrice(products: Product[]): number {
+  if (products.length === 0) {
+    return 0;
+  }
+
+  const productTotals = products.map(product => {
+    const baseTotal = product.price * product.quantity;
+    
+    if (product.discount !== undefined && product.discount > 0) {
+      return baseTotal * (1 - product.discount / 100);
+    }
+    
+    return baseTotal;
+  });
+
+  return productTotals.reduce((sum, total) => sum + total, 0);
+}
+
+const products = [
+  { name: 'Pen', price: 10, quantity: 2 },
+  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+
